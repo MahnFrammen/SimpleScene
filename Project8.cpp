@@ -1,3 +1,8 @@
+//Zach Pedersen
+//This is my work
+//Prof. Citro
+//CST-310
+
 #ifdef __APPLE_CC__
 #include <GLUT/glut.h>
 #else
