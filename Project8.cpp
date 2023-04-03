@@ -3,6 +3,7 @@
 //Prof. Citro
 //CST-310
 
+// Package Import
 #ifdef __APPLE_CC__
 #include <GLUT/glut.h>
 #else
@@ -11,6 +12,7 @@
 #include <cmath>
 #include <time.h>
 
+// Box and Shape creation
 void solidBox(GLdouble width, GLdouble height, GLdouble depth) {
       glPushMatrix();
       glScalef(width, height, depth);
@@ -25,6 +27,7 @@ void solidBox2(GLdouble width, GLdouble height, GLdouble depth) {
       glPopMatrix();
 }
 
+// Initializes the private member variables and displays the contents to the OpenGL window
 void display() {
         glClear(GL_COLOR_BUFFER_BIT);
         srand((unsigned)time(NULL));
@@ -59,6 +62,7 @@ void display() {
         glutSwapBuffers();
 }
 
+// Takes time as input from the user and creates a timer for the program
 void timer(int v) {
         static GLfloat u = 0.0;
         u += 0.01;
@@ -81,6 +85,7 @@ void init() {
         glCullFace(GL_BACK);
 }
 
+// Begin execution
 int main(int argc, char** argv) {
         glutInit(&argc, argv);
         glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB);
